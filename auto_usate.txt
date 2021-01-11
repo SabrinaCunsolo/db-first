@@ -1,22 +1,22 @@
 Modellizzare la struttura di una tabella per rappresentare le informazioni di auto usate per un concessionario.
 Nome repo: db-first
 
-id                            INT, PRIMARY_KEY(AUTO INCREMENT E UNIQUE VENGOMO ASSEGNATI AUTOMATICAMENTE ALLE COLONNE PRIMARY_KEY)
-brand                         VARCHAR(15)
-modello_auto                  VARCHAR(20)
-tipo_carrozzeria              VARCHAR(20)
-numero_portiere               TINYINT
-numero_sedili                 TINYINT
-materiale_degli_interni       VARCHAR(30)
-colore                        VARCHAR(30)
-numero_km                     INT
-potenza                       SMALLINT
-carburante                    VARCHAR(20)
-trasmissione                  VARCHAR(20)
-ruote_motrici                 VARCHAR(10)
-anno_costruzione              YEAR
-immatricolazione              YEAR
-VIN                           VARCHAR(17)
-condizioni_mezzo              VARCHAR(50)
-ultimo_tagliando              VARCHAR(20)
-descrizione_mezzo             TEXT
+id                            INT, PRIMARY_KEY(AUTO_INCREMENT, UNIQUE, NOTNULL, INDEX VENGONO ASSEGNATI AUTOMATICAMENTE ALLE COLONNE PRIMARY_KEY)
+brand                         VARCHAR(15), NOTNULL
+modello_auto                  VARCHAR(20), NOTNULL
+tipo_carrozzeria              VARCHAR(20), NOTNULL
+numero_portiere               TINYINT, NULL
+numero_sedili                 TINYINT, NULL
+materiale_degli_interni       VARCHAR(30), NULL
+colore                        VARCHAR(30), NULL
+numero_km                     INT, NOTNULL
+potenza                       SMALLINT, NOTNULL
+carburante                    VARCHAR(20), NOTNULL
+trasmissione                  VARCHAR(20), NOTNULL
+ruote_motrici                 VARCHAR(10), NULL
+anno_costruzione              YEAR, NOTNULL
+immatricolazione              YEAR, NOTNULL
+VIN                           VARCHAR(17), NULL, UNIQUE
+condizioni_mezzo              VARCHAR(50), NOTNULL
+ultimo_tagliando              DATE, NULL
+descrizione_mezzo             TEXT, NOTNULL
